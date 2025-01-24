@@ -10,7 +10,7 @@ const PaymentPage = () => {
   const initializePayment = async (user) => {
     try {
       // Call the backend API to initialize the payment
-      const response = await axios.post('http://localhost:5000/initialize-payment', user);
+      const response = await axios.post('https://paystack-backend-nodejs.onrender.com/initialize-payment', user);
 
       if (response.status === 200) {
         const { authorization_url } = response.data;
